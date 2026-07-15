@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=390, initial-scale=1.0" name="viewport"/>
+<title>Cleen Greenz | Professional Lawn Care Niles, MI</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#88d982",
+                        "outline-variant": "#bfcaba",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#b8c9d3",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "tertiary-fixed": "#d4e5ef",
+                        "primary-fixed": "#a3f69c",
+                        "surface": "#f9f9f9",
+                        "on-secondary-container": "#616363",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "secondary-fixed": "#e2e2e2",
+                        "background": "#f9f9f9",
+                        "secondary": "#5d5f5f",
+                        "inverse-primary": "#88d982",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-container": "#eeeeee",
+                        "on-tertiary-fixed-variant": "#394951",
+                        "on-primary-container": "#cbffc2",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-bright": "#f9f9f9",
+                        "surface-container-low": "#f3f3f3",
+                        "surface-container-highest": "#e2e2e2",
+                        "tertiary-container": "#607079",
+                        "primary": "#0d631b",
+                        "on-tertiary-container": "#e2f4fe",
+                        "on-primary-fixed-variant": "#005312",
+                        "on-tertiary-fixed": "#0d1e25",
+                        "tertiary": "#485860",
+                        "on-surface-variant": "#40493d",
+                        "on-secondary": "#ffffff",
+                        "outline": "#707a6c",
+                        "inverse-surface": "#2f3131",
+                        "surface-tint": "#1b6d24",
+                        "surface-variant": "#e2e2e2",
+                        "secondary-container": "#dfe0e0",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-surface": "#1a1c1c",
+                        "on-secondary-fixed-variant": "#454747",
+                        "surface-dim": "#dadada",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#002204",
+                        "primary-container": "#2e7d32"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-xl-mobile": ["Montserrat"],
+                        "label-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "headline-xl": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #f9f9f9;
+            color: #1a1c1c;
+            width: 390px;
+            margin: 0 auto;
+            /* Ensure overflow is allowed for scrolling */
+            overflow-x: hidden;
+            overflow-y: visible;
+            position: relative;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .mobile-nav-active {
+            transform: translateX(0);
+            pointer-events: auto;
+        }
+        .mobile-nav-inactive {
+            transform: translateX(100%);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Announcement Bar -->
+<div class="bg-primary text-on-primary text-center py-2 px-4 text-xs font-semibold select-none">
+    Weekly service slot available, reserve your spot today!
+</div>
+<!-- TopNavBar -->
+<header class="bg-surface sticky top-0 z-50 shadow-[0px_2px_8px_rgba(55,71,79,0.08)] h-20 px-margin-mobile flex justify-between items-center w-full">
+<a href="#" class="flex items-center">
+    <img src="logo.png" alt="Cleen Greenz Logo" class="h-12 w-auto">
+</a>
+<button class="p-2 text-primary focus:outline-none" id="menu-toggle">
+<span class="material-symbols-outlined text-[32px]">menu</span>
+</button>
+</header>
+<!-- Mobile Slide-out Menu -->
+<div class="fixed inset-0 bg-surface z-[60] transition-transform duration-300 mobile-nav-inactive flex flex-col p-margin-mobile" id="mobile-menu">
+<div class="flex justify-between items-center mb-10">
+<div class="flex items-center">
+    <img src="logo.png" alt="Cleen Greenz Logo" class="h-10 w-auto">
+</div>
+<button class="p-2 text-primary" id="menu-close">
+<span class="material-symbols-outlined text-[32px]">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-6">
+<a class="text-primary font-bold text-headline-md border-b-2 border-primary pb-2 self-start" href="#">Services</a>
+<a class="text-secondary font-headline-md" href="#">Process</a>
+<a class="text-secondary font-headline-md" href="#">Why Us</a>
+<a class="text-secondary font-headline-md" href="#">Reviews</a>
+<a class="text-secondary font-headline-md" href="#">FAQ</a>
+</nav>
+<div class="mt-auto flex flex-col gap-4">
+<a class="flex items-center gap-2 text-primary font-bold" href="tel:2693628286">
+<span class="material-symbols-outlined">call</span>
+            (269) 362-8286
+        </a>
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-label-md text-label-md uppercase tracking-wider">Get Free Estimate</button>
+</div>
+</div>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[600px] flex flex-col justify-end p-margin-mobile overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center scale-105" data-alt="A lush, vibrant green lawn mowed by Cleen Greenz" style="background-image: url('mower_hill.jpg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+</div>
+<div class="relative z-10 space-y-6">
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-white leading-tight">Expert Lawn Care for Niles Homeowners.</h1>
+<p class="text-white/90 font-body-md text-body-md">Precision mowing and lawn maintenance that boosts your curb appeal instantly. Local, reliable, and professional since 2009.</p>
+<button class="w-full bg-primary text-on-primary py-5 rounded-lg font-headline-md text-headline-md shadow-lg active:scale-95 transition-all">Get Free Estimate</button>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-20 px-margin-mobile bg-surface">
+<div class="mb-10 text-center">
+<span class="text-primary font-label-md tracking-widest uppercase">Professional Solutions</span>
+<h2 class="font-headline-lg text-headline-lg mt-2">What We Offer</h2>
+</div>
+<div class="grid grid-cols-1 gap-6">
+<div class="bg-white p-8 rounded-xl shadow-[0px_2px_8px_rgba(55,71,79,0.08)] border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">grass</span>
+<h3 class="font-headline-md text-headline-md mb-2">Precision Mowing</h3>
+<p class="text-secondary font-body-md">Consistent, sharp cuts that promote healthy grass growth and professional patterns.</p>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-[0px_2px_8px_rgba(55,71,79,0.08)]">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">content_cut</span>
+<h3 class="font-headline-md text-headline-md mb-2">Edging &amp; Trimming</h3>
+<p class="text-secondary font-body-md">Clean lines along walkways, flower beds, and driveways for a crisp, tailored look.</p>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-[0px_2px_8px_rgba(55,71,79,0.08)]">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">yard</span>
+<h3 class="font-headline-md text-headline-md mb-2">Seasonal Cleanups</h3>
+<p class="text-secondary font-body-md">Comprehensive leaf removal and debris clearing to keep your property healthy year-round.</p>
+</div>
+</div>
+</section>
+<!-- Why Us -->
+<section class="py-20 px-margin-mobile bg-surface-container-low">
+<div class="relative">
+<div class="mb-12">
+<h2 class="font-headline-lg text-headline-lg">The Cleen Greenz Advantage</h2>
+</div>
+<div class="space-y-12">
+<div class="relative flex items-start gap-4">
+<div class="bg-primary-container p-3 rounded-lg flex-shrink-0">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md">15+ Years Experience</h4>
+<p class="text-on-surface-variant mt-2">Serving the Niles community since 2009 with a track record of excellence and reliability.</p>
+</div>
+</div>
+<div class="relative flex items-start gap-4">
+<div class="bg-primary-container p-3 rounded-lg flex-shrink-0">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md">Locally Owned</h4>
+<p class="text-on-surface-variant mt-2">We aren't a big franchise. We're your neighbors, committed to beautifying our local streets.</p>
+</div>
+</div>
+<div class="relative flex items-start gap-4">
+<div class="bg-primary-container p-3 rounded-lg flex-shrink-0">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">schedule</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md">Dependable Service</h4>
+<p class="text-on-surface-variant mt-2">We show up when we say we will. Our schedule is our promise to you.</p>
+</div>
+</div>
+</div>
+<div class="mt-16 rounded-xl overflow-hidden aspect-[4/3] shadow-xl">
+<img class="w-full h-full object-cover" alt="Cleen Greenz Lawn Edging" src="tree_lawn.jpg"/>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-20 px-margin-mobile bg-white">
+<h2 class="font-headline-lg text-headline-lg mb-10 text-center">Common Questions</h2>
+<div class="space-y-4">
+<div class="border border-outline-variant rounded-xl p-6">
+<button class="flex justify-between items-center w-full text-left" onclick="this.nextElementSibling.classList.toggle('hidden')">
+<span class="font-headline-md text-headline-md pr-4">What payment methods do you accept?</span>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</button>
+<div class="mt-4 text-secondary font-body-md border-t pt-4">
+                    We aim for convenience and accept payment via <span class="font-bold text-primary">Cash</span> and <span class="font-bold text-primary">Zelle</span>.
+                </div>
+</div>
+<div class="border border-outline-variant rounded-xl p-6">
+<button class="flex justify-between items-center w-full text-left" onclick="this.nextElementSibling.classList.toggle('hidden')">
+<span class="font-headline-md text-headline-md pr-4">Do I need to be home?</span>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</button>
+<div class="hidden mt-4 text-secondary font-body-md border-t pt-4">
+                    No, as long as we have access to your lawn, you don't need to be home. We will leave your property tidy and secure.
+                </div>
+</div>
+<div class="border border-outline-variant rounded-xl p-6">
+<button class="flex justify-between items-center w-full text-left" onclick="this.nextElementSibling.classList.toggle('hidden')">
+<span class="font-headline-md text-headline-md pr-4">How often should I mow?</span>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</button>
+<div class="hidden mt-4 text-secondary font-body-md border-t pt-4">
+                    We typically recommend weekly service during the peak growing season to maintain optimal turf health and appearance.
+                </div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 px-margin-mobile bg-primary text-on-primary text-center">
+<h2 class="font-headline-xl-mobile text-headline-xl-mobile mb-6">Ready for a Better Lawn?</h2>
+<p class="font-body-lg text-body-lg mb-10 opacity-90">Join dozens of satisfied homeowners in Niles who trust Cleen Greenz for their lawn care needs.</p>
+<div class="space-y-4">
+<a class="block w-full bg-white text-primary py-5 rounded-lg font-headline-md text-headline-md flex items-center justify-center gap-3" href="tel:2693628286">
+<span class="material-symbols-outlined">call</span>
+                (269) 362-8286
+            </a>
+<a class="block w-full border-2 border-white/40 text-white py-5 rounded-lg font-headline-md text-headline-md flex items-center justify-center gap-3" href="mailto:Almightyme1979@gmail.com">
+<span class="material-symbols-outlined">mail</span>
+                Email Us
+            </a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest py-20 px-margin-mobile text-on-surface">
+<div class="space-y-12">
+<div>
+<div class="mb-4">
+    <img src="logo.png" alt="Cleen Greenz Logo" class="h-10 w-auto">
+</div>
+<p class="text-secondary-fixed-variant">Professional lawn care and maintenance services. Serving Niles, MI and surrounding areas since 2009.</p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<h5 class="font-label-md text-label-md uppercase tracking-widest text-primary mb-4">Company</h5>
+<ul class="space-y-3 font-body-md text-secondary">
+<li><a class="hover:text-primary transition-colors" href="#">Services</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Process</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Why Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-label-md uppercase tracking-widest text-primary mb-4">Legal</h5>
+<ul class="space-y-3 font-body-md text-secondary">
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Service Terms</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-10 border-t border-outline-variant/30">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="font-body-md">Niles, Michigan</span>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary">mail</span>
+<a class="font-body-md" href="mailto:Almightyme1979@gmail.com">Almightyme1979@gmail.com</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">phone</span>
+<a class="font-body-md font-bold" href="tel:2693628286">(269) 362-8286</a>
+</div>
+</div>
+<div class="flex gap-4 pt-6 border-t border-outline-variant/30">
+<a class="w-10 h-10 bg-surface flex items-center justify-center rounded-full hover:bg-primary hover:text-white transition-all text-secondary" href="https://www.facebook.com/cleengreenz" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined text-xl">facebook</span></a>
+<a class="w-10 h-10 bg-surface flex items-center justify-center rounded-full hover:bg-primary hover:text-white transition-all text-secondary" href="https://www.instagram.com/cglawncare_niles/" target="_blank" rel="noopener noreferrer"><svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+</div>
+<div class="pt-8 text-center text-label-sm text-secondary">
+            © 2024 Cleen Greenz Lawn Care. Locally owned and operated in Niles, MI. Established 2009.
+        </div>
+</div>
+</footer>
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuClose = document.getElementById('menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.remove('mobile-nav-inactive');
+        mobileMenu.classList.add('mobile-nav-active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    menuClose.addEventListener('click', () => {
+        mobileMenu.classList.remove('mobile-nav-active');
+        mobileMenu.classList.add('mobile-nav-inactive');
+        document.body.style.overflow = 'visible';
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            mobileMenu.classList.remove('mobile-nav-active');
+            mobileMenu.classList.add('mobile-nav-inactive');
+            document.body.style.overflow = 'visible';
+        });
+    });
+</script>
+</body></html>

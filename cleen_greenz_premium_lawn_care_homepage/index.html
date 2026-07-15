@@ -538,6 +538,42 @@
 </div>
 </div>
 </footer>
+
+<!-- Estimate Modal Overlay -->
+<div id="estimate-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm hidden">
+    <div class="bg-white p-8 rounded-2xl shadow-2xl max-w-md w-full mx-margin-mobile text-center relative border border-surface-container-high">
+        <button type="button" onclick="closeModal()" class="absolute top-4 right-4 text-secondary hover:text-on-surface">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <span class="material-symbols-outlined text-primary text-5xl mb-4">mail</span>
+        <h3 class="font-headline-md text-headline-md mb-2 text-on-surface">Opening Email Client...</h3>
+        <p class="text-secondary mb-6 text-sm">We are opening your default mail application. If it doesn't open, copy our details to email or text us directly:</p>
+        <div class="space-y-4 text-left">
+            <div class="bg-surface-container-low p-4 rounded-xl flex justify-between items-center border border-surface-container">
+                <div>
+                    <span class="text-xs text-secondary block font-semibold uppercase">Email</span>
+                    <span class="text-on-surface font-medium select-all">Almightyme1979@gmail.com</span>
+                </div>
+                <button type="button" onclick="copyText('Almightyme1979@gmail.com', this)" class="text-primary text-sm flex items-center gap-1 font-semibold hover:opacity-80">
+                    <span class="material-symbols-outlined text-base">content_copy</span> Copy
+                </button>
+            </div>
+            <div class="bg-surface-container-low p-4 rounded-xl flex justify-between items-center border border-surface-container">
+                <div>
+                    <span class="text-xs text-secondary block font-semibold uppercase">Call or Text</span>
+                    <span class="text-on-surface font-medium select-all">(269) 362-8286</span>
+                </div>
+                <button type="button" onclick="copyText('2693628286', this)" class="text-primary text-sm flex items-center gap-1 font-semibold hover:opacity-80">
+                    <span class="material-symbols-outlined text-base">content_copy</span> Copy
+                </button>
+            </div>
+        </div>
+        <button type="button" onclick="closeModal()" class="mt-8 w-full bg-primary text-on-primary py-3 rounded-xl font-label-md hover:opacity-90">
+            Got it
+        </button>
+    </div>
+</div>
+
 <script>
         function toggleFaq(button) {
             const parent = button.parentElement;
@@ -564,7 +600,25 @@
             event.preventDefault();
             const details = document.getElementById('estimate-details').value;
             if (!details) return;
+            
+            // Show fallback modal
+            document.getElementById('estimate-modal').classList.remove('hidden');
+            
+            // Try opening mail client
             window.location.href = `mailto:Almightyme1979@gmail.com?subject=Lawn%20Care%20Estimate%20Request&body=Hello,%20I'd%20like%20to%20request%20a%20lawn%20care%20estimate.%20Here%20are%20my%20details:%20${encodeURIComponent(details)}`;
+        }
+
+        function closeModal() {
+            document.getElementById('estimate-modal').classList.add('hidden');
+        }
+
+        function copyText(text, button) {
+            navigator.clipboard.writeText(text);
+            const originalHTML = button.innerHTML;
+            button.innerHTML = `<span class="material-symbols-outlined text-base">check</span> Copied!`;
+            setTimeout(() => {
+                button.innerHTML = originalHTML;
+            }, 2000);
         }
 
         // Header scroll effect

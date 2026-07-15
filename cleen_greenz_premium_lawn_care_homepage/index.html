@@ -474,9 +474,9 @@
 <div class="relative z-10 px-margin-desktop max-w-container-max mx-auto text-center">
 <h2 class="font-headline-xl text-headline-xl mb-8">Ready for the Best Looking Lawn on the Block?</h2>
 <p class="font-body-lg text-body-lg mb-12 opacity-90 max-w-2xl mx-auto">Join dozens of your neighbors who trust Cleen Greenz for reliable, professional lawn care. Get your free, no-obligation quote today.</p>
-<form class="bg-white p-4 rounded-xl shadow-2xl max-w-2xl mx-auto flex flex-col md:flex-row gap-4">
-<input class="flex-grow px-6 py-4 rounded-lg border-surface-container-high text-on-surface focus:ring-primary focus:border-primary" placeholder="Your Address" type="text">
-<button class="bg-on-primary-fixed-variant text-white px-8 py-4 rounded-lg font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all whitespace-nowrap">
+<form onsubmit="handleEstimate(event)" class="bg-white p-4 rounded-xl shadow-2xl max-w-2xl mx-auto flex flex-col md:flex-row gap-4">
+<input id="estimate-address" required class="flex-grow px-6 py-4 rounded-lg border-surface-container-high text-on-surface focus:ring-primary focus:border-primary" placeholder="Your Address" type="text">
+<button type="submit" class="bg-on-primary-fixed-variant text-white px-8 py-4 rounded-lg font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all whitespace-nowrap">
                         Send Me My Estimate
                     </button>
 </form>
@@ -557,6 +557,20 @@
                 content.style.maxHeight = content.scrollHeight + "px";
             } else {
                 content.style.maxHeight = null;
+            }
+        }
+
+        function handleEstimate(event) {
+            event.preventDefault();
+            const address = document.getElementById('estimate-address').value;
+            if (!address) return;
+            
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            
+            if (isMobile) {
+                window.location.href = `sms:+12693628286?body=Hello,%20I'd%20like%20to%20request%20a%20lawn%20care%20estimate%20for%20my%20property%20at:%20${encodeURIComponent(address)}`;
+            } else {
+                window.location.href = `mailto:Almightyme1979@gmail.com?subject=Lawn%20Care%20Estimate%20Request&body=Hello,%20I'd%20like%20to%20request%20a%20lawn%20care%20estimate%20for%20my%20property%20at:%20${encodeURIComponent(address)}`;
             }
         }
 

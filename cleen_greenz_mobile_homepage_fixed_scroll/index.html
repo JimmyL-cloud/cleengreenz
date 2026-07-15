@@ -382,17 +382,21 @@
     const menuClose = document.getElementById('menu-close');
     const mobileMenu = document.getElementById('mobile-menu');
 
-    menuToggle.addEventListener('click', () => {
-        mobileMenu.classList.remove('mobile-nav-inactive');
-        mobileMenu.classList.add('mobile-nav-active');
-        document.body.style.overflow = 'hidden';
-    });
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('mobile-nav-inactive');
+            mobileMenu.classList.add('mobile-nav-active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
 
-    menuClose.addEventListener('click', () => {
-        mobileMenu.classList.remove('mobile-nav-active');
-        mobileMenu.classList.add('mobile-nav-inactive');
-        document.body.style.overflow = 'visible';
-    });
+    if (menuClose && mobileMenu) {
+        menuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('mobile-nav-active');
+            mobileMenu.classList.add('mobile-nav-inactive');
+            document.body.style.overflow = 'visible';
+        });
+    }
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

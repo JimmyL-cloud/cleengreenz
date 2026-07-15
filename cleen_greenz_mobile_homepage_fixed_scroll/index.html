@@ -151,11 +151,9 @@
 </button>
 </div>
 <nav class="flex flex-col gap-6">
-<a class="text-primary font-bold text-headline-md border-b-2 border-primary pb-2 self-start" href="#">Services</a>
-<a class="text-secondary font-headline-md" href="#">Process</a>
-<a class="text-secondary font-headline-md" href="#">Why Us</a>
-<a class="text-secondary font-headline-md" href="#">Reviews</a>
-<a class="text-secondary font-headline-md" href="#">FAQ</a>
+<a class="text-primary font-bold text-headline-md border-b-2 border-primary pb-2 self-start" href="#services">Services</a>
+<a class="text-secondary font-headline-md" href="#why-us">Why Us</a>
+<a class="text-secondary font-headline-md" href="#faq">FAQ</a>
 </nav>
 <div class="mt-auto flex flex-col gap-4">
 <a class="flex items-center gap-2 text-primary font-bold" href="tel:2693628286">
@@ -179,7 +177,7 @@
 </div>
 </section>
 <!-- Services Section -->
-<section class="py-20 px-margin-mobile bg-surface">
+<section id="services" class="py-20 px-margin-mobile bg-surface">
 <div class="mb-10 text-center">
 <span class="text-primary font-label-md tracking-widest uppercase">Professional Solutions</span>
 <h2 class="font-headline-lg text-headline-lg mt-2">What We Offer</h2>
@@ -203,7 +201,7 @@
 </div>
 </section>
 <!-- Why Us -->
-<section class="py-20 px-margin-mobile bg-surface-container-low">
+<section id="why-us" class="py-20 px-margin-mobile bg-surface-container-low">
 <div class="relative">
 <div class="mb-12">
 <h2 class="font-headline-lg text-headline-lg">The Cleen Greenz Advantage</h2>
@@ -243,7 +241,7 @@
 </div>
 </section>
 <!-- FAQ Section -->
-<section class="py-20 px-margin-mobile bg-white">
+<section id="faq" class="py-20 px-margin-mobile bg-white">
 <h2 class="font-headline-lg text-headline-lg mb-10 text-center">Common Questions</h2>
 <div class="space-y-4">
 <div class="border border-outline-variant rounded-xl p-6">
@@ -284,10 +282,10 @@
 <span class="material-symbols-outlined">call</span>
                 (269) 362-8286
             </a>
-<a class="block w-full border-2 border-white/40 text-white py-5 rounded-lg font-headline-md text-headline-md flex items-center justify-center gap-3" href="mailto:Almightyme1979@gmail.com">
+<button onclick="triggerEstimate()" class="block w-full border-2 border-white/40 text-white py-5 rounded-lg font-headline-md text-headline-md flex items-center justify-center gap-3">
 <span class="material-symbols-outlined">mail</span>
                 Email Us
-            </a>
+            </button>
 </div>
 </section>
 </main>
@@ -304,10 +302,9 @@
 <div>
 <h5 class="font-label-md text-label-md uppercase tracking-widest text-primary mb-4">Company</h5>
 <ul class="space-y-3 font-body-md text-secondary">
-<li><a class="hover:text-primary transition-colors" href="#">Services</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Process</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Why Us</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">FAQ</a></li>
+<li><a class="hover:text-primary transition-colors" href="#services">Services</a></li>
+<li><a class="hover:text-primary transition-colors" href="#why-us">Why Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#faq">FAQ</a></li>
 </ul>
 </div>
 <div>
@@ -325,7 +322,7 @@
 </div>
 <div class="flex items-center gap-4 mb-4">
 <span class="material-symbols-outlined text-primary">mail</span>
-<a class="font-body-md" href="mailto:Almightyme1979@gmail.com">Almightyme1979@gmail.com</a>
+<span onclick="triggerEstimate()" class="font-body-md cursor-pointer hover:text-primary transition-colors">Almightyme1979@gmail.com</span>
 </div>
 <div class="flex items-center gap-4">
 <span class="material-symbols-outlined text-primary">phone</span>

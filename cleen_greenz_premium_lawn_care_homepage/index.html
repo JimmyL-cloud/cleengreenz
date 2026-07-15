@@ -563,7 +563,10 @@
             }
         }
 
-
+        // Fallback for cached browsers
+        function handleEstimate(event) {
+            // Do not call preventDefault so the form submits normally
+        }
 
         // Header scroll effect
         window.addEventListener('scroll', () => {

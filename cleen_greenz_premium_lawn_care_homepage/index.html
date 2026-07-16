@@ -96,9 +96,9 @@
 <!-- 1. Sticky Header -->
 <header class="docked full-width top-0 sticky z-50 bg-surface shadow-[0px_2px_8px_rgba(55,71,79,0.08)] h-20 transition-all duration-300">
 <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-full">
-<a href="#" class="flex items-center gap-3">
-<img src="logo_transparent.png" alt="Cleen Greenz Logo" class="h-12 w-auto">
-</a>
+<button onclick="openModal()" class="flex items-center gap-3 focus:outline-none" title="View Contact Info">
+    <img src="logo_transparent.png" alt="Cleen Greenz Logo" class="h-12 w-auto">
+</button>
 <nav class="hidden md:flex items-center gap-8">
 <a href="#services" class="font-label-md text-label-md text-secondary hover:text-primary transition-colors">Services</a>
 <a href="#process" class="font-label-md text-label-md text-secondary hover:text-primary transition-colors">Process</a>
@@ -522,7 +522,7 @@
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-primary">mail</span>
-<span class="text-secondary">Almightyme1979@gmail.com</span>
+<span class="text-secondary">chris@cleengreenz.com</span>
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-primary">location_on</span>
@@ -552,9 +552,9 @@
             <div class="bg-surface-container-low p-4 rounded-xl flex justify-between items-center border border-surface-container">
                 <div>
                     <span class="text-xs text-secondary block font-semibold uppercase">Email</span>
-                    <span class="text-on-surface font-medium select-all">Almightyme1979@gmail.com</span>
+                    <span class="text-on-surface font-medium select-all">chris@cleengreenz.com</span>
                 </div>
-                <button type="button" onclick="copyText('Almightyme1979@gmail.com', this)" class="text-primary text-sm flex items-center gap-1 font-semibold hover:opacity-80">
+                <button type="button" onclick="copyText('chris@cleengreenz.com', this)" class="text-primary text-sm flex items-center gap-1 font-semibold hover:opacity-80">
                     <span class="material-symbols-outlined text-base">content_copy</span> Copy
                 </button>
             </div>
@@ -605,7 +605,11 @@
             document.getElementById('estimate-modal').classList.remove('hidden');
             
             // Try opening mail client
-            window.location.href = `mailto:Almightyme1979@gmail.com?subject=Lawn%20Care%20Estimate%20Request&body=Hello,%20I'd%20like%20to%20request%20a%20lawn%20care%20estimate.%20Here%20are%20my%20details:%20${encodeURIComponent(details)}`;
+            window.location.href = `mailto:chris@cleengreenz.com?subject=Lawn%20Care%20Estimate%20Request&body=Hello,%20I'd%20like%20to%20request%20a%20lawn%20care%20estimate.%20Here%20are%20my%20details:%20${encodeURIComponent(details)}`;
+        }
+
+        function openModal() {
+            document.getElementById('estimate-modal').classList.remove('hidden');
         }
 
         function closeModal() {

@@ -133,9 +133,9 @@
 </div>
 <!-- TopNavBar -->
 <header class="bg-surface sticky top-0 z-50 shadow-[0px_2px_8px_rgba(55,71,79,0.08)] h-20 px-margin-mobile flex justify-between items-center w-full">
-<a href="#" class="flex items-center">
+<button onclick="triggerEstimate()" class="flex items-center focus:outline-none" title="View Contact Info">
     <img src="logo.png" alt="Cleen Greenz Logo" class="h-12 w-auto">
-</a>
+</button>
 <button class="p-2 text-primary focus:outline-none" id="menu-toggle">
 <span class="material-symbols-outlined text-[32px]">menu</span>
 </button>
@@ -322,7 +322,7 @@
 </div>
 <div class="flex items-center gap-4 mb-4">
 <span class="material-symbols-outlined text-primary">mail</span>
-<span onclick="triggerEstimate()" class="font-body-md cursor-pointer hover:text-primary transition-colors">Almightyme1979@gmail.com</span>
+<span onclick="triggerEstimate()" class="font-body-md cursor-pointer hover:text-primary transition-colors">chris@cleengreenz.com</span>
 </div>
 <div class="flex items-center gap-4">
 <span class="material-symbols-outlined text-primary">phone</span>
@@ -352,9 +352,9 @@
             <div class="bg-surface-container-low p-4 rounded-xl flex justify-between items-center border border-surface-container">
                 <div>
                     <span class="text-xs text-secondary block font-semibold uppercase">Email</span>
-                    <span class="text-on-surface font-medium select-all">Almightyme1979@gmail.com</span>
+                    <span class="text-on-surface font-medium select-all">chris@cleengreenz.com</span>
                 </div>
-                <button type="button" onclick="copyText('Almightyme1979@gmail.com', this)" class="text-primary text-sm flex items-center gap-1 font-semibold hover:opacity-80">
+                <button type="button" onclick="copyText('chris@cleengreenz.com', this)" class="text-primary text-sm flex items-center gap-1 font-semibold hover:opacity-80">
                     <span class="material-symbols-outlined text-base">content_copy</span> Copy
                 </button>
             </div>
@@ -407,7 +407,7 @@
         // Show fallback modal
         document.getElementById('estimate-modal').classList.remove('hidden');
         // Try opening mail client
-        window.location.href = "mailto:Almightyme1979@gmail.com?subject=Lawn%20Care%20Estimate%20Request";
+        window.location.href = "mailto:chris@cleengreenz.com?subject=Lawn%20Care%20Estimate%20Request";
     }
 
     function closeModal() {

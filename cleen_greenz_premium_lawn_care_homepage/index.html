@@ -89,7 +89,32 @@
           },
         },
       }
-    }catch(_e){}</script><meta charset="utf-8"></head><body class="bg-background text-on-surface font-body-md">
+    }catch(_e){}</script><meta charset="utf-8"><style>
+    @keyframes pulse-glow {
+        0%, 100% {
+            box-shadow: 0 0 0 0 rgba(0, 166, 237, 0.4);
+        }
+        50% {
+            box-shadow: 0 0 20px 6px rgba(0, 166, 237, 0.6);
+        }
+    }
+    .animate-pulse-glow {
+        animation: pulse-glow 2s infinite;
+    }
+    .btn-animate {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+    .btn-animate:hover {
+        transform: translateY(-2px) scale(1.03) !important;
+        box-shadow: 0 0 20px 4px rgba(0, 166, 237, 0.6) !important;
+        background-color: #33b8f0 !important;
+    }
+    .btn-animate:active {
+        transform: translateY(0) scale(0.97) !important;
+        background-color: #0082ba !important;
+    }
+</style>
+</head><body class="bg-background text-on-surface font-body-md">
 <!-- Announcement Bar -->
 <div class="bg-primary text-on-primary text-center py-2 px-4 text-sm font-semibold select-none">
     From Sunday to Sunday, your lawn care is our business
@@ -109,7 +134,7 @@
 <a href="#faq" class="font-label-md text-label-md text-[#a9c2e0] hover:text-primary transition-colors">FAQ</a>
 </nav>
 <div class="flex items-center gap-4">
-<a href="#quote" class="bg-primary text-on-primary px-6 py-3 rounded-lg font-label-md text-label-md hover:opacity-90 active:bg-[#00A6ed] active:scale-95 transition-all shadow-sm">
+<a href="#quote" class="bg-primary text-on-primary px-6 py-3 rounded-lg font-label-md text-label-md btn-animate transition-all shadow-sm">
                     Get Free Estimate
                 </a>
 </div>
@@ -127,7 +152,7 @@
 <h1 class="font-headline-xl text-headline-xl mb-6 leading-tight">Beautiful Lawns Without Giving Up Your Weekend</h1>
 <p class="font-body-lg text-body-lg mb-10 opacity-90">Professional grass cutting and lawn maintenance in Niles, Michigan. Reliable weekly mowing, crisp edging, and dependable service that keeps your property looking its best.</p>
 <div class="flex flex-wrap gap-4">
-<a href="#quote" class="bg-primary text-on-primary px-8 py-4 rounded-lg font-label-md text-label-md hover:opacity-90 active:bg-[#00A6ed] active:scale-95 transition-all shadow-lg flex items-center gap-2">
+<a href="#quote" class="bg-primary text-on-primary px-8 py-4 rounded-lg font-label-md text-label-md btn-animate animate-pulse-glow transition-all shadow-lg flex items-center gap-2">
                             Get a Free Estimate
                             <span class="material-symbols-outlined text-base">arrow_forward</span>
 </a>
@@ -478,7 +503,7 @@
 <p class="font-body-lg text-body-lg mb-12 opacity-90 max-w-2xl mx-auto">Join dozens of your neighbors who trust Cleen Greenz for reliable, professional lawn care. Get your free, no-obligation quote today.</p>
 <form onsubmit="handleEstimate(event)" class="bg-[#133560]/90 backdrop-blur-sm border border-[#305b8f]/30 p-4 rounded-xl shadow-2xl max-w-2xl mx-auto flex flex-col md:flex-row gap-4">
 <input id="estimate-details" required class="flex-grow px-6 py-4 rounded-lg border-surface-container-high text-on-surface focus:ring-primary focus:border-primary" placeholder="Your Name & Address" type="text">
-<button type="submit" class="bg-on-primary-fixed-variant text-white px-8 py-4 rounded-lg font-label-md text-label-md hover:opacity-90 active:bg-[#00A6ed] active:scale-95 transition-all whitespace-nowrap">
+<button type="submit" class="bg-on-primary-fixed-variant text-white px-8 py-4 rounded-lg font-label-md text-label-md btn-animate transition-all whitespace-nowrap">
                         Send Name & Address for Estimate
                     </button>
 </form>
@@ -633,13 +658,9 @@
             if (window.scrollY > 50) {
                 header.classList.add('h-16');
                 header.classList.remove('h-20');
-                header.classList.add('bg-white/95');
-                header.classList.add('backdrop-blur-sm');
             } else {
                 header.classList.remove('h-16');
                 header.classList.add('h-20');
-                header.classList.remove('bg-white/95');
-                header.classList.remove('backdrop-blur-sm');
             }
         });
     </script>

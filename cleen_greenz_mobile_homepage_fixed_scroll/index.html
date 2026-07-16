@@ -7,8 +7,7 @@
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;600&amp;family=Fredoka:wght@600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
@@ -25,45 +24,45 @@
                         "on-background": "#1a1c1c",
                         "tertiary-fixed": "#d4e5ef",
                         "primary-fixed": "#a3f69c",
-                        "surface": "#f9f9f9",
-                        "on-secondary-container": "#616363",
+                        "surface": "#0d2c54",
+                        "on-secondary-container": "#a9c2e0",
                         "secondary-fixed-dim": "#c6c6c7",
                         "secondary-fixed": "#e2e2e2",
-                        "background": "#f9f9f9",
-                        "secondary": "#5d5f5f",
+                        "background": "#0d2c54",
+                        "secondary": "#a9c2e0",
                         "inverse-primary": "#88d982",
-                        "surface-container-high": "#e8e8e8",
-                        "surface-container": "#eeeeee",
+                        "surface-container-high": "#133560",
+                        "surface-container": "#133560",
                         "on-tertiary-fixed-variant": "#394951",
                         "on-primary-container": "#cbffc2",
                         "inverse-on-surface": "#f1f1f1",
                         "surface-bright": "#f9f9f9",
-                        "surface-container-low": "#f3f3f3",
-                        "surface-container-highest": "#e2e2e2",
+                        "surface-container-low": "#0d2c54",
+                        "surface-container-highest": "#1a457a",
                         "tertiary-container": "#607079",
-                        "primary": "#0d631b",
+                        "primary": "#00A6ed",
                         "on-tertiary-container": "#e2f4fe",
-                        "on-primary-fixed-variant": "#005312",
+                        "on-primary-fixed-variant": "#00A6ed",
                         "on-tertiary-fixed": "#0d1e25",
                         "tertiary": "#485860",
-                        "on-surface-variant": "#40493d",
+                        "on-surface-variant": "#e2f4fe",
                         "on-secondary": "#ffffff",
-                        "outline": "#707a6c",
+                        "outline": "#305b8f",
                         "inverse-surface": "#2f3131",
                         "surface-tint": "#1b6d24",
-                        "surface-variant": "#e2e2e2",
+                        "surface-variant": "#133560",
                         "secondary-container": "#dfe0e0",
                         "on-secondary-fixed": "#1a1c1c",
                         "on-error-container": "#93000a",
                         "on-tertiary": "#ffffff",
                         "error": "#ba1a1a",
-                        "on-surface": "#1a1c1c",
+                        "on-surface": "#ffffff",
                         "on-secondary-fixed-variant": "#454747",
                         "surface-dim": "#dadada",
                         "error-container": "#ffdad6",
-                        "surface-container-lowest": "#ffffff",
-                        "on-primary-fixed": "#002204",
-                        "primary-container": "#2e7d32"
+                        "surface-container-lowest": "#133560",
+                        "on-primary-fixed": "#005073",
+                        "primary-container": "#0082ba"
                     },
                     "borderRadius": {
                         "DEFAULT": "0.25rem",
@@ -79,6 +78,7 @@
                         "container-max": "1280px"
                     },
                     "fontFamily": {
+                        "fun": ["Fredoka"],
                         "headline-lg": ["Montserrat"],
                         "body-md": ["Inter"],
                         "body-lg": ["Inter"],
@@ -133,8 +133,9 @@
 </div>
 <!-- TopNavBar -->
 <header class="bg-surface sticky top-0 z-50 shadow-[0px_2px_8px_rgba(55,71,79,0.08)] h-20 px-margin-mobile flex justify-between items-center w-full">
-<button onclick="triggerEstimate()" class="flex items-center focus:outline-none" title="View Contact Info">
+<button onclick="triggerEstimate()" class="flex items-center gap-2 focus:outline-none" title="View Contact Info">
     <img src="logo.png" alt="Cleen Greenz Logo" class="h-12 w-auto">
+    <span class="text-[#ffb400] text-[11px] font-semibold tracking-wide whitespace-nowrap font-fun">Niles #1 free lawn care app</span>
 </button>
 <button class="p-2 text-primary focus:outline-none" id="menu-toggle">
 <span class="material-symbols-outlined text-[32px]">menu</span>
@@ -152,8 +153,8 @@
 </div>
 <nav class="flex flex-col gap-6">
 <a class="text-primary font-bold text-headline-md border-b-2 border-primary pb-2 self-start" href="#services">Services</a>
-<a class="text-secondary font-headline-md" href="#why-us">Why Us</a>
-<a class="text-secondary font-headline-md" href="#faq">FAQ</a>
+<a class="text-[#a9c2e0] font-headline-md" href="#why-us">Why Us</a>
+<a class="text-[#a9c2e0] font-headline-md" href="#faq">FAQ</a>
 </nav>
 <div class="mt-auto flex flex-col gap-4">
 <a class="flex items-center gap-2 text-primary font-bold" href="tel:2693628286">
@@ -173,7 +174,7 @@
 <div class="relative z-10 space-y-6">
 <h1 class="font-headline-xl-mobile text-headline-xl-mobile text-white leading-tight">Expert Lawn Care for Niles Homeowners.</h1>
 <p class="text-white/90 font-body-md text-body-md">Precision mowing and lawn maintenance that boosts your curb appeal instantly. Local, reliable, and professional since 2009.</p>
-<button onclick="triggerEstimate()" class="flex items-center justify-center text-center w-full h-14 bg-primary text-on-primary rounded-lg font-headline-md text-headline-md shadow-lg active:scale-95 transition-all">Get Free Estimate</button>
+<button onclick="triggerEstimate()" class="flex items-center justify-center text-center w-full h-14 bg-primary text-on-primary rounded-lg font-headline-md text-headline-md shadow-lg active:bg-[#00A6ed] active:scale-95 transition-all">Get Free Estimate</button>
 </div>
 </section>
 <!-- Services Section -->
@@ -183,20 +184,20 @@
 <h2 class="font-headline-lg text-headline-lg mt-2">What We Offer</h2>
 </div>
 <div class="grid grid-cols-1 gap-6">
-<div class="bg-white p-8 rounded-xl shadow-[0px_2px_8px_rgba(55,71,79,0.08)] border-l-4 border-primary">
-<span class="material-symbols-outlined text-primary text-4xl mb-4">grass</span>
+<div class="bg-[#133560]/80 backdrop-blur-sm border border-[#305b8f]/30 p-8 rounded-xl shadow-[0px_2px_8px_rgba(55,71,79,0.08)] border-l-4 border-primary">
+<span class="material-symbols-outlined text-[#ffb400] text-4xl mb-4">grass</span>
 <h3 class="font-headline-md text-headline-md mb-2">Precision Mowing</h3>
-<p class="text-secondary font-body-md">Consistent, sharp cuts that promote healthy grass growth and professional patterns.</p>
+<p class="text-[#a9c2e0] font-body-md">Consistent, sharp cuts that promote healthy grass growth and professional patterns.</p>
 </div>
-<div class="bg-white p-8 rounded-xl shadow-[0px_2px_8px_rgba(55,71,79,0.08)]">
-<span class="material-symbols-outlined text-primary text-4xl mb-4">content_cut</span>
+<div class="bg-[#133560]/80 backdrop-blur-sm border border-[#305b8f]/30 p-8 rounded-xl shadow-[0px_2px_8px_rgba(55,71,79,0.08)]">
+<span class="material-symbols-outlined text-[#ffb400] text-4xl mb-4">content_cut</span>
 <h3 class="font-headline-md text-headline-md mb-2">Edging &amp; Trimming</h3>
-<p class="text-secondary font-body-md">Clean lines along walkways, flower beds, and driveways for a crisp, tailored look.</p>
+<p class="text-[#a9c2e0] font-body-md">Clean lines along walkways, flower beds, and driveways for a crisp, tailored look.</p>
 </div>
-<div class="bg-white p-8 rounded-xl shadow-[0px_2px_8px_rgba(55,71,79,0.08)]">
-<span class="material-symbols-outlined text-primary text-4xl mb-4">yard</span>
+<div class="bg-[#133560]/80 backdrop-blur-sm border border-[#305b8f]/30 p-8 rounded-xl shadow-[0px_2px_8px_rgba(55,71,79,0.08)]">
+<span class="material-symbols-outlined text-[#ffb400] text-4xl mb-4">yard</span>
 <h3 class="font-headline-md text-headline-md mb-2">Seasonal Cleanups</h3>
-<p class="text-secondary font-body-md">Comprehensive leaf removal and debris clearing to keep your property healthy year-round.</p>
+<p class="text-[#a9c2e0] font-body-md">Comprehensive leaf removal and debris clearing to keep your property healthy year-round.</p>
 </div>
 </div>
 </section>
@@ -209,29 +210,29 @@
 <div class="space-y-12">
 <div class="relative flex items-start gap-4">
 <div class="bg-primary-container p-3 rounded-lg flex-shrink-0">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="material-symbols-outlined text-[#ffb400]" style="font-variation-settings: 'FILL' 1;">verified</span>
 </div>
 <div>
 <h4 class="font-headline-md text-headline-md">15+ Years Experience</h4>
-<p class="text-on-surface-variant mt-2">Serving the Niles community since 2009 with a track record of excellence and reliability.</p>
+<p class="text-[#a9c2e0] mt-2">Serving the Niles community since 2009 with a track record of excellence and reliability.</p>
 </div>
 </div>
 <div class="relative flex items-start gap-4">
 <div class="bg-primary-container p-3 rounded-lg flex-shrink-0">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+<span class="material-symbols-outlined text-[#ffb400]" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
 </div>
 <div>
 <h4 class="font-headline-md text-headline-md">Locally Owned</h4>
-<p class="text-on-surface-variant mt-2">We aren't a big franchise. We're your neighbors, committed to beautifying our local streets.</p>
+<p class="text-[#a9c2e0] mt-2">We aren't a big franchise. We're your neighbors, committed to beautifying our local streets.</p>
 </div>
 </div>
 <div class="relative flex items-start gap-4">
 <div class="bg-primary-container p-3 rounded-lg flex-shrink-0">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">schedule</span>
+<span class="material-symbols-outlined text-[#ffb400]" style="font-variation-settings: 'FILL' 1;">schedule</span>
 </div>
 <div>
 <h4 class="font-headline-md text-headline-md">Dependable Service</h4>
-<p class="text-on-surface-variant mt-2">We show up when we say we will. Our schedule is our promise to you.</p>
+<p class="text-[#a9c2e0] mt-2">We show up when we say we will. Our schedule is our promise to you.</p>
 </div>
 </div>
 </div>
@@ -247,27 +248,27 @@
 <div class="border border-outline-variant rounded-xl p-6">
 <button class="flex justify-between items-center w-full text-left" onclick="this.nextElementSibling.classList.toggle('hidden')">
 <span class="font-headline-md text-headline-md pr-4">What payment methods do you accept?</span>
-<span class="material-symbols-outlined text-primary">expand_more</span>
+<span class="material-symbols-outlined text-[#ffb400]">expand_more</span>
 </button>
-<div class="mt-4 text-secondary font-body-md border-t pt-4">
+<div class="mt-4 text-[#a9c2e0] font-body-md border-t pt-4">
                     We aim for convenience and accept payment via <span class="font-bold text-primary">Cash</span> and <span class="font-bold text-primary">Zelle</span>.
                 </div>
 </div>
 <div class="border border-outline-variant rounded-xl p-6">
 <button class="flex justify-between items-center w-full text-left" onclick="this.nextElementSibling.classList.toggle('hidden')">
 <span class="font-headline-md text-headline-md pr-4">Do I need to be home?</span>
-<span class="material-symbols-outlined text-primary">expand_more</span>
+<span class="material-symbols-outlined text-[#ffb400]">expand_more</span>
 </button>
-<div class="hidden mt-4 text-secondary font-body-md border-t pt-4">
+<div class="hidden mt-4 text-[#a9c2e0] font-body-md border-t pt-4">
                     No, as long as we have access to your lawn, you don't need to be home. We will leave your property tidy and secure.
                 </div>
 </div>
 <div class="border border-outline-variant rounded-xl p-6">
 <button class="flex justify-between items-center w-full text-left" onclick="this.nextElementSibling.classList.toggle('hidden')">
 <span class="font-headline-md text-headline-md pr-4">How often should I mow?</span>
-<span class="material-symbols-outlined text-primary">expand_more</span>
+<span class="material-symbols-outlined text-[#ffb400]">expand_more</span>
 </button>
-<div class="hidden mt-4 text-secondary font-body-md border-t pt-4">
+<div class="hidden mt-4 text-[#a9c2e0] font-body-md border-t pt-4">
                     We typically recommend weekly service during the peak growing season to maintain optimal turf health and appearance.
                 </div>
 </div>
@@ -296,12 +297,12 @@
 <div class="mb-4">
     <img src="logo.png" alt="Cleen Greenz Logo" class="h-10 w-auto">
 </div>
-<p class="text-secondary-fixed-variant">Professional lawn care and maintenance services. Serving Niles, MI and surrounding areas since 2009.</p>
+<p class="text-[#a9c2e0]-fixed-variant">Professional lawn care and maintenance services. Serving Niles, MI and surrounding areas since 2009.</p>
 </div>
 <div class="grid grid-cols-2 gap-8">
 <div>
 <h5 class="font-label-md text-label-md uppercase tracking-widest text-primary mb-4">Company</h5>
-<ul class="space-y-3 font-body-md text-secondary">
+<ul class="space-y-3 font-body-md text-[#a9c2e0]">
 <li><a class="hover:text-primary transition-colors" href="#services">Services</a></li>
 <li><a class="hover:text-primary transition-colors" href="#why-us">Why Us</a></li>
 <li><a class="hover:text-primary transition-colors" href="#faq">FAQ</a></li>
@@ -309,7 +310,7 @@
 </div>
 <div>
 <h5 class="font-label-md text-label-md uppercase tracking-widest text-primary mb-4">Legal</h5>
-<ul class="space-y-3 font-body-md text-secondary">
+<ul class="space-y-3 font-body-md text-[#a9c2e0]">
 <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
 <li><a class="hover:text-primary transition-colors" href="#">Service Terms</a></li>
 </ul>
@@ -317,23 +318,23 @@
 </div>
 <div class="pt-10 border-t border-outline-variant/30">
 <div class="flex items-center gap-4 mb-4">
-<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="material-symbols-outlined text-[#ffb400]">location_on</span>
 <span class="font-body-md">Niles, Michigan</span>
 </div>
 <div class="flex items-center gap-4 mb-4">
-<span class="material-symbols-outlined text-primary">mail</span>
+<span class="material-symbols-outlined text-[#ffb400]">mail</span>
 <span onclick="triggerEstimate()" class="font-body-md cursor-pointer hover:text-primary transition-colors">chris@cleengreenz.com</span>
 </div>
 <div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-primary">phone</span>
+<span class="material-symbols-outlined text-[#ffb400]">phone</span>
 <a class="font-body-md font-bold" href="tel:2693628286">(269) 362-8286</a>
 </div>
 </div>
 <div class="flex gap-4 pt-6 border-t border-outline-variant/30">
-<a class="w-10 h-10 bg-surface flex items-center justify-center rounded-full hover:bg-primary hover:text-white transition-all text-secondary" href="https://www.facebook.com/cleengreenz" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined text-xl">facebook</span></a>
-<a class="w-10 h-10 bg-surface flex items-center justify-center rounded-full hover:bg-primary hover:text-white transition-all text-secondary" href="https://www.instagram.com/cglawncare_niles/" target="_blank" rel="noopener noreferrer"><svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+<a class="w-10 h-10 bg-surface flex items-center justify-center rounded-full hover:bg-primary hover:text-white transition-all text-[#a9c2e0]" href="https://www.facebook.com/cleengreenz" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined text-xl">facebook</span></a>
+<a class="w-10 h-10 bg-surface flex items-center justify-center rounded-full hover:bg-primary hover:text-white transition-all text-[#a9c2e0]" href="https://www.instagram.com/cglawncare_niles/" target="_blank" rel="noopener noreferrer"><svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
 </div>
-<div class="pt-8 text-center text-label-sm text-secondary">
+<div class="pt-8 text-center text-label-sm text-[#a9c2e0]">
             © 2024 Cleen Greenz Lawn Care. Locally owned and operated in Niles, MI. Established 2009.
         </div>
 </div>
@@ -342,17 +343,17 @@
 <!-- Estimate Modal Overlay -->
 <div id="estimate-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm hidden">
     <div class="bg-white p-8 rounded-2xl shadow-2xl max-w-sm w-full mx-4 text-center relative border border-surface-container-high">
-        <button type="button" onclick="closeModal()" class="absolute top-4 right-4 text-secondary hover:text-on-surface">
+        <button type="button" onclick="closeModal()" class="absolute top-4 right-4 text-[#a9c2e0] hover:text-on-surface">
             <span class="material-symbols-outlined">close</span>
         </button>
-        <span class="material-symbols-outlined text-primary text-5xl mb-4">mail</span>
+        <span class="material-symbols-outlined text-[#ffb400] text-5xl mb-4">mail</span>
         <h3 class="font-headline-md text-headline-md mb-2 text-on-surface">Opening Email Client...</h3>
-        <p class="text-secondary mb-6 text-sm">We are opening your email app. If it doesn't open, copy our details to email or text us directly:</p>
+        <p class="text-[#a9c2e0] mb-6 text-sm">We are opening your email app. If it doesn't open, copy our details to email or text us directly:</p>
         <div class="space-y-4 text-left">
             <div class="bg-surface-container-low p-4 rounded-xl flex justify-between items-center border border-surface-container">
                 <div>
-                    <span class="text-xs text-secondary block font-semibold uppercase">Email</span>
-                    <span class="text-on-surface font-medium select-all">chris@cleengreenz.com</span>
+                    <span class="text-xs text-[#a9c2e0] block font-semibold uppercase">Email</span>
+                    <span class="text-white font-medium select-all">chris@cleengreenz.com</span>
                 </div>
                 <button type="button" onclick="copyText('chris@cleengreenz.com', this)" class="text-primary text-sm flex items-center gap-1 font-semibold hover:opacity-80">
                     <span class="material-symbols-outlined text-base">content_copy</span> Copy
@@ -360,8 +361,8 @@
             </div>
             <div class="bg-surface-container-low p-4 rounded-xl flex justify-between items-center border border-surface-container">
                 <div>
-                    <span class="text-xs text-secondary block font-semibold uppercase">Call or Text</span>
-                    <span class="text-on-surface font-medium select-all">(269) 362-8286</span>
+                    <span class="text-xs text-[#a9c2e0] block font-semibold uppercase">Call or Text</span>
+                    <span class="text-white font-medium select-all">(269) 362-8286</span>
                 </div>
                 <button type="button" onclick="copyText('2693628286', this)" class="text-primary text-sm flex items-center gap-1 font-semibold hover:opacity-80">
                     <span class="material-symbols-outlined text-base">content_copy</span> Copy
